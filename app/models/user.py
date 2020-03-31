@@ -31,7 +31,7 @@ class User(Base):
     def password(self, raw):
         self._password = generate_password_hash(raw)
 
-    @staticmethod
+    @staticmethod  # 对象里面创建对象 时加上静态方法(类方法) 如果不喜欢静态方法 可以放在app/api/v1/clitent.py __register_user_by_email 方法中
     def register_by_email(nickname, account, secret):
         with db.auto_commit():
             user = User()
