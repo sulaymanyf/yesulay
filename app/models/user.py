@@ -4,8 +4,9 @@
 from tokenize import String
 
 from sqlalchemy import Column, Integer, SmallInteger
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
+from app.lib.error_code import AuthFailed
 from app.models.base import Base, db
 
 __author__ = 'YefanSulayman'
