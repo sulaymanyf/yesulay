@@ -3,7 +3,7 @@
 """
 from flask import Blueprint
 
-from app.api.v1 import user, book
+from app.api.v1 import user, book, clitent
 
 __author__ = 'YefanSulayman'
 
@@ -13,4 +13,5 @@ def create_blueprint_v1():
     # 红图注册到蓝图
     user.api.register(bp_v1)
     book.api.register(bp_v1)
+    clitent.api.register(bp_v1)
     return bp_v1
